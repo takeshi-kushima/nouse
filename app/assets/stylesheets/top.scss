@@ -1,0 +1,25 @@
+// Place all the styles related to the top controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.example {/*親div*/
+  position: relative;/*相対配置*/
+  }
+
+.example p {
+  position: absolute;/*絶対配置*/
+  color: #FF7F50;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%,-50%);
+  -webkit-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+  margin:0;
+  padding:0;
+  font-weight: bold; /*太字に*/
+  font-size: 50px;
+  }
+
+.example img {
+  width: 100%;
+  }

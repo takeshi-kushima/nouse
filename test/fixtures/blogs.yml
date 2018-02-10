@@ -1,11 +1,13 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  date: 2017-12-21
+  date: 2018-02-09
   title: MyString
   content: MyString
+  user_id: 1
 
 two:
-  date: 2017-12-21
+  date: 2018-02-09
   title: MyString
   content: MyString
+  user_id: 1

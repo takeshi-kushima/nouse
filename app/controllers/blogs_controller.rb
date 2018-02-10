@@ -1,31 +1,30 @@
 class BlogsController < ApplicationController
   before_action :set_blog, only: [:show, :edit, :update, :destroy]
+  before_action :current_user, only: [:new, :edit, :show]
 
-  # GET /blogs
-  # GET /blogs.json
+
   def index
     @blogs = Blog.all
   end
 
-  # GET /blogs/1
-  # GET /blogs/1.json
+
   def show
+     @favorite = current_user.favorites.find_by(blog_id: @blog.id)
   end
 
-  # GET /blogs/new
+  
   def new
     @blog = Blog.new
   end
 
-  # GET /blogs/1/edit
+  
   def edit
   end
 
-  # POST /blogs
-  # POST /blogs.json
+  
   def create
     @blog = Blog.new(blog_params)
-
+    @blog.user_id = current_user.id 
     respond_to do |format|
       if @blog.save
         format.html { redirect_to @blog, notice: 'Blog was successfully created.' }
@@ -37,8 +36,6 @@ class BlogsController < ApplicationController
     end
   end
 
-  # PATCH/PUT /blogs/1
-  # PATCH/PUT /blogs/1.json
   def update
     sleep 3
     respond_to do |format|
@@ -52,8 +49,7 @@ class BlogsController < ApplicationController
     end
   end
 
-  # DELETE /blogs/1
-  # DELETE /blogs/1.json
+ 
   def destroy
     @blog.destroy
     respond_to do |format|

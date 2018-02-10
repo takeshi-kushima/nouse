@@ -2,5 +2,5 @@
 
 <%= render 'form', blog: @blog %>
 
-<%= link_to 'Show', @blog %> |
-<%= link_to 'Back', blogs_path %>
+<button class="btn btn-success"><%= link_to 'Show', @blog %></button>
+<button type="button" class="btn btn-primary"><%= link_to "back", :back %></button>

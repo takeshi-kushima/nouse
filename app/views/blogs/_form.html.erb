@@ -26,7 +26,7 @@
     <%= form.text_area :content, id: :blog_content,cols: 14, rows: 10 %>
   </div>
 
-  <div class="actions">
-    <%= form.submit '更新', data: { confirm: 'この内容で更新してもよろしいですか？', disable_with: '処理中' } %>
+  <div class="field">
+    <button type='submit' name='action' value='send' class="btn btn-primary">送信</button>
   </div>
 <% end %>
