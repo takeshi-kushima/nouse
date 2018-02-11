@@ -88,9 +88,8 @@ Rails.application.configure do
 
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
-end
-
-  config.action_mailer.default_url_options = { host: 'protected-bayou-29328.git' }
+  
+  config.action_mailer.default_url_options = { host: '自分のHerokuアプリのドメイン' }
 ActionMailer::Base.delivery_method = :smtp
 ActionMailer::Base.smtp_settings =
 {
@@ -102,3 +101,6 @@ ActionMailer::Base.smtp_settings =
  authentication: :plain,
  enable_starttls_auto: true
 }
+end
+
+  
