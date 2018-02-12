@@ -59,3 +59,7 @@ gem 'bootstrap3-datetimepicker-rails', '~> 4.14.30'
 group :development do
   gem 'letter_opener_web'
 end
+gem 'carrierwave'
+gem 'mini_magick'
+gem 'jquery-rails' 
+gem 'jquery-ui-rails'
