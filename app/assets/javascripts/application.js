@@ -11,7 +11,7 @@
 // about supported directives.
 //
 //= require rails-ujs
-//= require bootstrap/dist/js/bootstrap.min
+//= require bootstrap/dist/css/bootstrap.min
 //= require jquery 
 //= require bootstrap-sprockets 
 //= require toastr 
