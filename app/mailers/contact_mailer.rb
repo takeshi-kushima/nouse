@@ -1,6 +1,6 @@
 class ContactMailer < ApplicationMailer
   def contact_mail(blog)
     @blog = blog
-    mail to:"@blog.user.email",subject:"投稿確認"
+    mail to: @blog.user.email,subject:"投稿確認"
   end
 end
